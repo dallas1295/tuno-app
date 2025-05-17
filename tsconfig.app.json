@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Or a later target like ESNext
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Ensure DOM types are included
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler", // Recommended for Vite
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true, // Enables a wide range of strict checks
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true, // Ensure all switch cases have a break or return
+    "noImplicitAny": true, // Included in "strict", but good to be explicit
+    "noImplicitReturns": true, // Included in "strict", but good to be explicit
+    "noImplicitThis": true, // Included in "strict", but good to be explicit
+    "strictNullChecks": true, // Included in "strict", but good to be explicit
+    "strictFunctionTypes": true, // Included in "strict", but good to be explicit
+    "strictBindCallApply": true, // Included in "strict", but good to be explicit
+    "forceConsistentCasingInFileNames": true // Ensure consistent casing in file names
+
+    // You might also consider:
+    // "noImplicitOverride": true, // Ensure 'override' keyword is used when overriding methods
+    // "noPropertyAccessFromIndexSignature": true, // Enforce dot access over bracket notation
+    // "exactOptionalPropertyTypes": true, // Requires exact type when dealing with optional properties
+    "baseUrl": ".", // This is crucial: tells TypeScript to resolve non-relative module names relative to the current directory (project root)
+    "paths": {
+      "@/*": [
+        "src/*"
+      ] // This defines the alias: any import starting with '@/'' will be looked for in the 'src' directory
+    }
+  },
+  "include": ["src"], // Include your application code
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
